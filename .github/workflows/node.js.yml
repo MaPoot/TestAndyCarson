@@ -22,8 +22,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
+      env: 
+        ANDY_LOGIN_INFO: ${{ secrets.ANDY_LOGIN_INFO }}
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git clone https://andycarson182:Pala1234.@github.com/andycarson182/testManuelito.git
+    - run: git clone https://"$ANDY_LOGIN_INFO"@github.com/andycarson182/testManuelito.git
     - run: npm install -g newman 
     - run: newman run testManuelito/CI-CD.postman_collection.json -e testManuelito/Test_environment.json
