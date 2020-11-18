@@ -28,4 +28,4 @@ jobs:
     - run: ls
     - run: npm install
     - run: npm install -g newman
-    - run: newman run CI-CD.postman_collection.json -e Test_environment.json
+    - run: newman run testManuelito/CI-CD.postman_collection.json -e testManuelito/Test_environment.json
