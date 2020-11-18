@@ -24,10 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        
-    - run: "$ANDY_LOGIN_INFO"
-      env:
-        ANDY_LOGIN_INFO: ${{ secrets.ANDY_LOGIN_INFO }}
     - run: git clone 'https://"$ANDY_LOGIN_INFO"@github.com/andycarson182/testManuelito.git'
       env:
         ANDY_LOGIN_INFO: ${{ secrets.ANDY_LOGIN_INFO }}
