@@ -24,6 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git clone https://andycarson182:Pala1234.word@github.com/andycarson182/testManuelito.git
+    - run: git clone https://andycarson182:Pala1234.@github.com/andycarson182/testManuelito.git
     - run: npm install -g newman 
     - run: newman run testManuelito/CI-CD.postman_collection.json -e testManuelito/Test_environment.json
