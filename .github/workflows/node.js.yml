@@ -26,6 +26,7 @@ jobs:
         ANDY_LOGIN_INFO: ${{ secrets.ANDY_LOGIN_INFO }}
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git clone https://$ANDY_LOGIN_INFO@github.com/andycarson182/testManuelito.git
+    - run: ANDY_LOGIN_INFO
+    - run: git clone https://@github.com/andycarson182/testManuelito.git
     - run: npm install -g newman 
     - run: newman run testManuelito/CI-CD.postman_collection.json -e testManuelito/Test_environment.json
